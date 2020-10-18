@@ -1,5 +1,9 @@
+package Test;
+
 import org.junit.Assert;
 import org.junit.Test;
+
+import static Constant.TriangleServiceHttpStatusCodeConstant.OK_200;
 
 public class TriangleServiceTests extends TriangleServiceTestRunner{
 
@@ -7,14 +11,14 @@ public class TriangleServiceTests extends TriangleServiceTestRunner{
     public void authSuccsess() {
         response = tsa.getAllTriangles();
         statusCode = response.getStatusCode();
-        Assert.assertEquals(200, statusCode);
+        Assert.assertEquals(OK_200, statusCode);
     }
 
     @Test
     public void addTriangle() {
         response = tsa.createNewTriangle(FIRST_SIDE, SECOND_SIDE, THIRD_SIDE);
         statusCode = response.getStatusCode();
-        Assert.assertEquals(200, statusCode);
+        Assert.assertEquals(OK_200, statusCode);
         Assert.assertEquals(1, tsa.getTriangleIds().size());
     }
 
@@ -48,13 +52,13 @@ public class TriangleServiceTests extends TriangleServiceTestRunner{
         Assert.assertEquals(TRIANGLE_LIMIT, tsa.getTriangleIds().size());
         response = tsa.createNewTriangle(FIRST_SIDE, SECOND_SIDE, THIRD_SIDE);
         statusCode = response.getStatusCode();
-        Assert.assertNotEquals( 200, statusCode);
+        Assert.assertNotEquals( OK_200, statusCode);
     }
 
     @Test
     public void unacceptableTriangleSides() {
         FIRST_SIDE = FIRST_SIDE + 100;
         response = tsa.createNewTriangle(FIRST_SIDE, SECOND_SIDE, THIRD_SIDE);
-        Assert.assertNotEquals( 200, statusCode);
+        Assert.assertNotEquals( OK_200, statusCode);
     }
 }

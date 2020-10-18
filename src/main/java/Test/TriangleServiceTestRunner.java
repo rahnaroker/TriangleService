@@ -1,3 +1,7 @@
+package Test;
+
+import Util.TriangleServiceActions;
+import Util.TriangleServiceDataGenerator;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

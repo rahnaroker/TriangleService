@@ -1,3 +1,5 @@
+package Util;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,5 +24,9 @@ public class TriangleServiceConfig {
             logger.error(e);
         }
         return PROPERTIES.getProperty(key);
+    }
+
+    public static String getProps(String key) {
+        return new TriangleServiceConfig().readProperties(key);
     }
 }
