@@ -23,6 +23,7 @@ public class TriangleServiceConfig {
         } catch (IOException e) {
             logger.error(e);
         }
+        logger.debug("Read property: " + key);
         return PROPERTIES.getProperty(key);
     }
 

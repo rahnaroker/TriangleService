@@ -3,6 +3,7 @@ package Test;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static Constant.TriangleServiceBaseConstant.TRIANGLE_LIMIT;
 import static Constant.TriangleServiceHttpStatusCodeConstant.OK_200;
 
 public class TriangleServiceTests extends TriangleServiceTestRunner{
