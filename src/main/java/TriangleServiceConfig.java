@@ -11,7 +11,7 @@ public class TriangleServiceConfig {
         PROPERTIES = new Properties();
         FileInputStream fio;
         try {
-            fio = new FileInputStream("resources/config.properties");
+            fio = new FileInputStream("src/main/resources/config.properties");
             PROPERTIES.load(fio);
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
