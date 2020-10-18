@@ -30,11 +30,11 @@ public class TriangleServiceActions {
         return response;
     }
 
-    public Response createNewTriangle() {
+    public Response createNewTriangle(int firstSide, int secondSide, int thirdSide) {
         logger.debug("POST new triangle");
         JSONObject jsonBody = new JSONObject();
         jsonBody.put("separator", ";");
-        jsonBody.put("input", "" + TriangleServiceTests.FIRST_SIDE + ";" + TriangleServiceTests.SECOND_SIDE + ";" + TriangleServiceTests.THIRD_SIDE + "");
+        jsonBody.put("input", "" + firstSide + ";" + secondSide + ";" + thirdSide + "");
         Response response = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
