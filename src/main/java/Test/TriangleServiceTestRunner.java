@@ -28,7 +28,6 @@ public class TriangleServiceTestRunner {
     public int THIRD_SIDE = tsdg.getTHIRD_SIDE();
     public int EXPECTED_PERIMETER = tsdg.getEXPECTED_PERIMETER();
     public int EXPECTED_AREA = tsdg.getEXPECTED_AREA();
-//    public static int TRIANGLE_LIMIT = 10;
 
     @Rule
     public TestName name = new TestName();

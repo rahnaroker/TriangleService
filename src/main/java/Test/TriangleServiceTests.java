@@ -53,13 +53,13 @@ public class TriangleServiceTests extends TriangleServiceTestRunner{
         Assert.assertEquals(TRIANGLE_LIMIT, tsa.getTriangleIds().size());
         response = tsa.createNewTriangle(FIRST_SIDE, SECOND_SIDE, THIRD_SIDE);
         statusCode = response.getStatusCode();
-        Assert.assertNotEquals( OK_200, statusCode);
+        Assert.assertNotEquals(OK_200, statusCode);
     }
 
     @Test
     public void unacceptableTriangleSides() {
         FIRST_SIDE = FIRST_SIDE + 100;
         response = tsa.createNewTriangle(FIRST_SIDE, SECOND_SIDE, THIRD_SIDE);
-        Assert.assertNotEquals( OK_200, statusCode);
+        Assert.assertNotEquals(OK_200, statusCode);
     }
 }

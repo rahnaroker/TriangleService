@@ -2,6 +2,6 @@ package Constant;
 
 public class TriangleServiceHttpStatusCodeConstant {
 
-    public final static int OK_200 = 200;
+    public static final int OK_200 = 200;
 
 }
