@@ -12,10 +12,11 @@ import static io.restassured.RestAssured.given;
 public class TriangleServiceActions {
 
     private static final Logger logger = LogManager.getLogger(TriangleServiceActions.class);
+    TriangleServiceConfig tsc = new TriangleServiceConfig();
 
-    private static final String BASE_URL = TriangleServiceConfig.getProps("baseURL");
-    private static final String AUTH_HEADER = TriangleServiceConfig.getProps("authHeader");
-    private static final String AUTH_TOKEN = TriangleServiceConfig.getProps("authToken");
+    private final String BASE_URL = tsc.readProperties("baseURL");
+    private final String AUTH_HEADER = tsc.readProperties("authHeader");
+    private final String AUTH_TOKEN = tsc.readProperties("authToken");
 
     public Response getAllTriangles() {
         logger.debug("GET all triangles");
