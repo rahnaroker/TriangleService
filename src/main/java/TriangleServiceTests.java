@@ -96,4 +96,11 @@ public class TriangleServiceTests {
         statusCode = response.getStatusCode();
         Assert.assertNotEquals( 200, statusCode);
     }
+
+    @Test
+    public void unacceptableTriangleSides() {
+        FIRST_SIDE = FIRST_SIDE + 100;
+        response = ts.createNewTriangle();
+        Assert.assertNotEquals( 200, statusCode);
+    }
 }
